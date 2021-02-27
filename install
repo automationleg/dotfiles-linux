@@ -1,0 +1,20 @@
+#!/bin/bash 
+
+# install oh my bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+rm -f $HOME/.bashrc
+
+ln -sf dotfiles/.bashrc $HOME/.bashrc
+ln -sf dotfiles/.bashconfig $HOME/.bashconfig
+ln -sf dotfiles/.vimrc $HOME/.vimrc
+
+# install pyenv
+sudo apt update -y
+
+sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+ libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev\
+ libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl\
+ git
+
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+pyenv install --list
