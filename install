@@ -4,7 +4,6 @@ rm -f $HOME/.bashrc
 
 
 # install oh my bash
-# bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 git clone https://github.com/ohmybash/oh-my-bash.git ~/.oh-my-bash
 cp ~/.bashrc ~/.bashrc.orig
 # cp ~/.oh-my-bash/templates/bashrc.osh-template ~/.bashrc
@@ -13,6 +12,7 @@ cp ~/.bashrc ~/.bashrc.orig
 ln -sf dotfiles/.bashrc-oh-my-bash $HOME/.bashrc
 ln -sf dotfiles/.bashconfig $HOME/.bashconfig
 ln -sf dotfiles/.vimrc $HOME/.vimrc
+
 # install pyenv
 sudo apt update -y
 
@@ -24,6 +24,6 @@ sudo apt install -y make build-essential libssl-dev zlib1g-dev \
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 # reload bash to apply oh-my-bash
-source ~/.bashrc
+exec bash; source $HOME/.bashrc
 
 pyenv --version
