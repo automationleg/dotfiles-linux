@@ -22,8 +22,10 @@ sudo apt install -y make build-essential libssl-dev zlib1g-dev \
  git
 
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-
-# reload bash to apply oh-my-bash
-exec bash; source $HOME/.bashrc
+source $HOME/.bashrc
 
 pyenv --version
+
+# reload bash to apply oh-my-bash
+exec bash
+
