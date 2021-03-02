@@ -7,7 +7,7 @@ rm -f $HOME/.bashrc
 # bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 git clone https://github.com/ohmybash/oh-my-bash.git ~/.oh-my-bash
 cp ~/.bashrc ~/.bashrc.orig
-cp ~/.oh-my-bash/templates/bashrc.osh-template ~/.bashrc
+# cp ~/.oh-my-bash/templates/bashrc.osh-template ~/.bashrc
 
 # link configs
 ln -sf dotfiles/.bashrc-oh-my-bash $HOME/.bashrc
